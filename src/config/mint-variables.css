@@ -1,0 +1,8 @@
+/*
+Write your variables here. All available variables can be
+found in mint-ui\lib\.
+*/
+
+@import "~mint-ui/lib/toast/style.css";
+@import "~mint-ui/lib/indicator/style.css";
+@import "~mint-ui/lib/infinite-scroll/style.css";

@@ -1,0 +1,25 @@
+.content-wraper{
+    min-width: 1300px;
+    max-width: 1540px;
+    margin: 0 auto;
+}
+.flex-between{
+    display: flex;
+    justify-content: space-between;
+}
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex-around{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.min-center{
+    max-width:1540px;
+    min-width: 1300px;
+    padding:0 50px;
+    margin:0 auto;
+}
