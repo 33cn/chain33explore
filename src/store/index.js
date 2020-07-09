@@ -19,9 +19,6 @@ import {
 import {
     urlQuery
 } from '@/assets/js/common.js'
-import {
-    resolve
-} from 'bluebird';
 Vue.use(Vuex)
 
 export function applySettingInUrl() {
@@ -98,7 +95,7 @@ export default new Vuex.Store({
 
     getters: {
         // 是否平行链
-        isParallelChain: state => {
+        isParallelChain: () => {
             // 当前的节点配置为平行链，或者代码打包的配置为平行链
             return true
         },
