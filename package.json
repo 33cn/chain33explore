@@ -1,0 +1,44 @@
+{
+  "name": "33-block-explorer",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "vue-cli-service serve --open",
+    "build": "vue-cli-service build --modern",
+    "lint": "vue-cli-service lint",
+    "update:version": "sentry-cli releases propose-version"
+  },
+  "dependencies": {
+    "@33cn/chain33-transaction-parser": "^1.1.4",
+    "axios": "^0.18.0",
+    "babel-polyfill": "^6.26.0",
+    "chain33-rpc-api": "^1.5.3",
+    "chain33errori18n": "^1.0.1",
+    "element-ui": "^2.4.11",
+    "es6-promise": "^4.2.5",
+    "isomorphic-fetch": "^2.2.1",
+    "json-bigint": "^0.3.0",
+    "mint-ui": "^2.2.13",
+    "nprogress": "^0.2.0",
+    "raven-js": "^3.27.0",
+    "vue": "^2.5.17",
+    "vue-clipboard2": "^0.2.1",
+    "vue-i18n": "^8.2.1",
+    "vue-progressive-image": "^3.2.0",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1",
+    "whatwg-fetch": "^3.0.0"
+  },
+  "devDependencies": {
+    "@sentry/cli": "^1.37.3",
+    "@sentry/webpack-plugin": "^1.6.2",
+    "@vue/cli-plugin-babel": "^3.0.0-rc.12",
+    "@vue/cli-plugin-eslint": "^3.0.0-rc.12",
+    "@vue/cli-service": "^3.0.0-rc.12",
+    "babel-plugin-component": "^1.1.1",
+    "delete-sourcemap-webpack-plugin": "^1.0.1",
+    "node-sass": "^4.9.2",
+    "sass-loader": "^7.1.0",
+    "vue-template-compiler": "^2.5.17"
+  }
+}

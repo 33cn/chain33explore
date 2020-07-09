@@ -1,0 +1,59 @@
+.el-table td .cell {
+    margin: 0 auto !important;
+}
+.el-table th,
+.el-table td {
+    text-align: center;
+}
+.el-table th>.cell{
+    padding: 0 !important;
+}
+.el-table th>div,
+.el-table td .cell {
+    padding: 0;
+}
+
+.el-button-large{
+    width:120px;
+}
+.el-progress-bar__inner{
+    background: #eda362
+}
+.el-pagination{
+    text-align:center;
+    /*padding:10px 0px;*/
+}
+.el-tabs__content{
+    padding:0px 30px;
+}
+.el-tabs__active-bar{
+    top:0px;
+    background: #42b6ae
+}
+.el-tabs__item{
+    width:220px;
+    height:75px;
+    line-height: 75px;
+    text-align:center;
+    font-size:18px;
+}
+.el-tabs__item.is-active{
+    color: #42b6ae
+}
+.el-tabs{
+    width:100%;
+}
+.el-tabs--border-card .el-tabs__header{
+    background:#f7f7f7;
+}
+
+.el-button.is-plain:hover{
+    border-color:#C0CCDA;
+    color:#1F2D3D;
+}
+.el-input__inner:focus{
+    border-color:#999;
+}
+.el-scrollbar{
+    border-radius: 4px;
+}

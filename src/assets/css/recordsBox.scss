@@ -1,0 +1,179 @@
+/* 首页记录列表组件 */
+.records-box{
+    box-sizing: border-box;
+    padding-left: 50px;
+    width: 600px;
+    background-image: url('../../assets/images/img/xian.png');
+    background-position-y: 10px;
+    background-position-x: 5px;
+    background-repeat: no-repeat;
+    font-size:14px;
+    color: $black_font_gray;
+    padding-right: 10px;
+    height: 701px;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    
+    &::-webkit-scrollbar {
+        width: 1px;
+        height: 1px;
+        cursor:pointer;
+    }
+    &::-webkit-scrollbar-track {
+        border-radius: 2px;
+        background: rgba( 233,233,233, .2); 
+    }     
+    &::-webkit-scrollbar-thumb {
+        background: #e28e0163;
+        opacity: .6;
+    } 
+  
+    .records-title{
+        margin-bottom: 15px;
+        font-weight:400;
+        span {
+            font-size: 16px;
+            line-height: 28px;
+            color: $black_font_light;
+        }
+        a{
+            display: inline-block;
+            width:100px;
+            text-align: center;
+            line-height:34px;
+            border-radius:17px;
+            border:1px solid $black_border_dark_golden;
+            color: $black_font_white;
+        }
+    }
+    .record-item{
+        margin-bottom: 8px;
+    }
+    .record-title,
+    .record-content{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+  
+    .record-title{
+        padding-top: 5px;
+        background-color: #2E2D2E;
+        border-bottom: 1px solid #3E3D3E;
+        line-height: 36px;
+        a{
+            color: $day_font_orange;
+            text-decoration: underline;
+        }
+    }
+  
+    .record-content{
+        background-color:#353436;
+        padding-top: 14px;
+        padding-bottom: 6px;
+        line-height:30px;
+        text-align: center;
+        a{
+            color: $black_font_light;
+        }
+        .num{
+            color: $black_font_light;
+        }
+    }
+
+    .text,.numtext{
+        color: #EFEFEF;
+    }
+  
+    .record-col {
+        flex: 1 1 100%;
+        margin-right:12px;
+        &:last-child{
+            margin-right: 0;
+        }
+        &.miner{
+            min-width: 172px;
+        }
+        &.address{
+            min-width: 172px;
+        }
+    }
+    
+    .placeholder-wraper{
+        text-align: left;
+        width: 100%;
+    }
+  }
+  
+  // 移动端样式
+  .home-m .records-box{
+    padding: 0 3vw;
+    background-image: none;
+    width: 100vw;
+    height: 150vw;
+    margin: 4vw auto;
+    font-size: 3vw;
+    .record-title,
+    .record-content{
+        line-height: 8vw;
+        padding: 1px 10px;
+    }
+    .record-col {
+        flex: 1 1 100%;
+        margin-right:0;
+        &:first-child{
+            margin-right: 10px;
+        }
+        &.miner{
+            min-width: 37vw;
+        }
+        &.address{
+            min-width: 90px;
+        }
+    }
+    .record-item{
+        margin-bottom: 3vw;
+    }
+    &::-webkit-scrollbar-thumb{
+      background: none;
+    }
+  }
+
+  // 白色风格
+  .app-white{
+    .records-box{
+      color: $day_font_deepgray;
+    //   background-image: url('../../assets/images/img/lineday.png');
+    }
+    .records-title span{
+      color: $day_font_deepgray;
+    }
+    .records-title a{
+        color: $day_font_deepgray;
+        border:1px solid $day_font_deepgray;
+    }
+    .record-title{
+      background-color: #F1F2F4;
+      border-bottom: 1px solid #EAEBF3;
+      a{
+        color: $day_font_orange;
+      }
+    }
+    .record-item{
+      box-shadow:0px 4px 6px 0px rgba(231,233,236,1);
+    }
+    .record-content{
+      background-color: #ffffff;
+      a{
+        color: $day_font_blue;
+      }
+      .num{
+        color: $day_font_orange;
+      }
+    }
+    .text{
+        color: $day_font_dark;
+    }
+    .numtext{
+        color: $day_font_deepgray;
+    }
+  }
