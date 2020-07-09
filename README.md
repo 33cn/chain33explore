@@ -26,7 +26,7 @@ npm run build
 
 ```
 # 节点地址
-VUE_APP_DEFAULT_PROVIDER=http://47.75.33.69:8901
+VUE_APP_DEFAULT_PROVIDER=http://47.97.193.201:1901
 
 # 默认的执行器，主链是token，平行链是user.p.xxx.token
 VUE_APP_DEFAULT_EXECER=token
