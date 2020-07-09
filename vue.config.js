@@ -35,28 +35,5 @@ module.exports = {
         data: `@import "@/assets/css/common.scss";`
       }
     }
-  },
-
-  devServer: {
-    proxy: {
-      '/api': {
-        target: 'https://jiedian1.bityuan.com:8801/',
-        pathRewrite: {
-          '^/api': ''
-        }
-      },
-      '/map': {
-        target: 'http://120.79.156.149:8333',
-        pathRewrite: {
-          '^/map': ''
-        }
-      },
-      '/coin': {
-        target: 'https://www.bitfeel.cn/',
-        pathRewrite: {
-          '^/coin': ''
-        }
-      },
-    }
-  },
+  }
 }

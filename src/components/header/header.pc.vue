@@ -1,7 +1,7 @@
 <template>
   <div class="head">
     <div class="head-content min-center">
-      <img src="../../assets/images/chain33.png">
+      <img :src="logo">
       <ul id="selectUl">
         <li :class="{active: $route.path ==='/index'}" @click="indexState('index')">首页</li>
         <li
@@ -47,6 +47,9 @@ export default {
   computed: {
     provider() {
       return this.$store.state.apiSetting.provider;
+    },
+    logo(){
+      return this.$store.getters.getStyle==='white'? require('../../assets/images/chain33.png'):require('../../assets/images/chain33-b.png')
     }
   },
   methods: {

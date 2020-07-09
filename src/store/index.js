@@ -110,6 +110,9 @@ export default new Vuex.Store({
             let path = process.env.VUE_APP_DEFAULT_ICON || ''
             if (path) return require(`../../public/baseCoin/${path}`)
             else return require('../../public/baseCoin/baseCoin.png')
+        },
+        getStyle: state => {
+            return state.dispalyStyle
         }
     },
 

@@ -1,6 +1,6 @@
 // import json_parse from './json_parse'
 
-const coinApi = '/coin'
+const coinApi = 'https://www.bitfeel.cn/'
 
 const bityuanVersion = 'https://bityuan.com/mpapi/interface/app/last'
 
