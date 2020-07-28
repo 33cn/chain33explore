@@ -6,7 +6,7 @@
  */
 import {
     txParser
-} from '@33cn/chain33-transaction-parser'
+} from '../assets/js/txActions'
 
 /*
  *  需要保存的一个区块的信息
