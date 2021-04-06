@@ -11,7 +11,6 @@
   </div>
 </template>
 <script>
-import { STYLE_WHITE, STYLE_BLACK } from "@/config/constants";
 import display from "@/mixins/display.js";
 export default {
   mixins: [display],

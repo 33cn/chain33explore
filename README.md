@@ -1,10 +1,14 @@
 # Chain33 区块链浏览器
     此项目为配合Chain33底层区块链进行数据页面端查询展示。
 
+## 环境要求
+- [node ^8.0](http://nodejs.cn/)
+- [Vue ^2.5](https://cn.vuejs.org/)
+- [Vue-cli ^3.0](https://cli.vuejs.org/zh/)
 
 ## Project setup
 
-### 安装
+### 安装依赖
 ```
 npm install
 ```

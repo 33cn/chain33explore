@@ -11,14 +11,23 @@
  * 
  * coinStaticSymbol 为默认币种名称
  * 
-*/
+ */
 export function txParser(execer, payload, lang = 'cn') {
-  if (/^user\./.test(execer)) return { execerName: execer, action: {} }
-  if (/^user\.p\./.test(execer)) return { execerName: '平行链', action: {} }
+  if (/^user\./.test(execer)) return {
+    execerName: execer,
+    action: {}
+  }
+  if (/^user\.p\./.test(execer)) return {
+    execerName: '平行链',
+    action: {}
+  }
   if (!txmap[execer]) {
     /* eslint-disable-next-line */
     console.warn('execer name undefined in tx parser', execer)
-    return { execerName: execer, action: {} }
+    return {
+      execerName: execer,
+      action: {}
+    }
   }
   // 5.0.2.xxxx版本
   if (payload.Value) {
@@ -40,7 +49,10 @@ export function txParser(execer, payload, lang = 'cn') {
       if (!actionmap) {
         /* eslint-disable-next-line */
         console.warn('undefined actionKey', actionKey)
-        return { execerName: execer, action: {} }
+        return {
+          execerName: execer,
+          action: {}
+        }
       }
       action = {
         name: actionmap['name'][lang],
@@ -49,8 +61,10 @@ export function txParser(execer, payload, lang = 'cn') {
       }
     }
   }
-
-  return { execerName, action }
+  return {
+    execerName,
+    action
+  }
 
 }
 
@@ -64,7 +78,10 @@ export function txParser(execer, payload, lang = 'cn') {
  * @returns
  */
 export function txInWords(execer, payload, lang = 'cn') {
-  let { execerName, action } = txParser(execer, payload, lang)
+  let {
+    execerName,
+    action
+  } = txParser(execer, payload, lang)
 
   return `${execerName} ${JSON.stringify(action)}`
 }
@@ -194,6 +211,26 @@ const txmap = {
       "cn": "token",
       "en": "token",
     },
+    "actions": {
+      "withdraw": {
+        "name": {
+          "cn": "提币",
+          "en": "withdraw"
+        },
+        "coinAmount": "amount",
+        "coinSymbol": "cointoken",
+        "coinStaticSymbol": "BTY",
+      },
+      "transfer": {
+        "name": {
+          "cn": "转账",
+          "en": "transfer"
+        },
+        "coinAmount": "amount",
+        "coinSymbol": "cointoken",
+        "coinStaticSymbol": "BTY",
+      }
+    }
   },
 
   "trade": {
