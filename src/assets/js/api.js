@@ -1,4 +1,5 @@
 // import json_parse from './json_parse'
+import store from '../../store/index'
 
 const coinApi = 'https://www.bitfeel.cn/'
 
@@ -18,6 +19,13 @@ export function myFetch(data, url = '', config = {}) {
   }
   if (config.method === 'POST' || !config.method) {
     params.body = data
+  }
+  if (store.state.apiSetting.Authorization != null) {
+    let Authorization = store.state.apiSetting.Authorization
+    params.headers = {
+      ...params.headers,
+      Authorization
+    }
   }
   return fetch(url, params).then((response) => {
     if (response.status >= 200 && response.status < 300) {

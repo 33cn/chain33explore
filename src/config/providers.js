@@ -1,5 +1,4 @@
-export const defaultHttpOptions =[
-    {
+export const defaultHttpOptions = [{
         // value: 'https://120.79.156.149:8801/',
         value: 'https://mainnode.bityuan.com:8801',
         label: 'mainnet 主链1'
@@ -21,7 +20,6 @@ export const defaultHttpOptions =[
         label: 'mainnet 主链3'
     },
     {
-        // value: 'https://114.55.101.159:8801',
         value: 'https://testnode.bityuan.com:8801',
         label: 'testnet 测试链'
     },
@@ -31,8 +29,7 @@ export const defaultHttpOptions =[
     }
 ]
 
-export const defaultHttpsOptions =[
-    {
+export const defaultHttpsOptions = [{
         value: 'https://mainnode.bityuan.com:8801',
         label: 'mainnet 主链'
     },
@@ -46,7 +43,7 @@ export const defaultHttpsOptions =[
     }
 ]
 
-function isHttps () {
+function isHttps() {
     return /^https/.test(location.protocol)
 }
 

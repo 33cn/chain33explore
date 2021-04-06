@@ -9,10 +9,10 @@
     "update:version": "sentry-cli releases propose-version"
   },
   "dependencies": {
+    "@33cn/chain33-rpc-api": "^1.5.28",
     "@33cn/chain33-transaction-parser": "^1.1.4",
     "axios": "^0.18.0",
     "babel-polyfill": "^6.26.0",
-    "chain33-rpc-api": "^1.5.3",
     "chain33errori18n": "^1.0.1",
     "element-ui": "^2.4.11",
     "es6-promise": "^4.2.5",

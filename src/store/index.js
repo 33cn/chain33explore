@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import Chain33Rpc from 'chain33-rpc-api'
+import Chain33Rpc from '@33cn/chain33-rpc-api'
 import createLogger from 'vuex/dist/logger'
 import {
     DEFAULT_PROVIDER,
@@ -11,7 +11,8 @@ import {
     STYLE_WHITE,
     SESSION_MAXHEIGHT_KEY,
     SESSION_MAXHASH_KEY,
-    STORAGE_NODES_KEY
+    STORAGE_NODES_KEY,
+    STORAGE_BASIC
 } from '@/config/constants'
 import {
     checkIsMobile
@@ -19,6 +20,7 @@ import {
 import {
     urlQuery
 } from '@/assets/js/common.js'
+import Base64 from "@/assets/js/base64.js";
 Vue.use(Vuex)
 
 export function applySettingInUrl() {
@@ -58,10 +60,8 @@ export function getValueInSession(storageKey, defaultValue) {
     return defaultValue
 }
 
-export const defaultNodeAddress = getValueInStorage(STORAGE_PROVIDER_KEY, DEFAULT_PROVIDER)
 
-
-export default new Vuex.Store({
+var Store = new Vuex.Store({
     strict: process.env.NODE_ENV !== 'production',
     plugins: process.env.NODE_ENV !== 'production' ? [createLogger()] : [],
     state: {
@@ -75,7 +75,9 @@ export default new Vuex.Store({
             // 节点地址
             provider: defaultNodeAddress,
             // 执行器
-            execer: getValueInStorage(STORAGE_EXECER_KEY, process.env.VUE_APP_DEFAULT_EXECER || DEFAULT_EXECER)
+            execer: process.env.VUE_APP_DEFAULT_EXECER || DEFAULT_EXECER,
+            // Basic auth信息 
+            Authorization: null
         },
 
         // 浏览器界面风格 
@@ -123,6 +125,7 @@ export default new Vuex.Store({
             if (state.apiSetting.provider !== setting.provider) {
                 localStorage.removeItem(SESSION_MAXHEIGHT_KEY)
                 localStorage.removeItem(SESSION_MAXHASH_KEY)
+                localStorage.removeItem(STORAGE_BASIC)
             }
             state.apiSetting = {
                 ...state.apiSetting,
@@ -130,6 +133,7 @@ export default new Vuex.Store({
             }
             localStorage.setItem(STORAGE_PROVIDER_KEY, setting.provider)
             localStorage.setItem(STORAGE_EXECER_KEY, setting.execer)
+            localStorage.setItem(STORAGE_BASIC, setting.Authorization)
             cleanNodeCache()
         },
         changeStyle(state, style) {
@@ -193,3 +197,23 @@ export default new Vuex.Store({
         }
     }
 })
+
+// 判断basic auth节点
+function judgeNode(node) {
+    // 应用修改
+    let uri = node.match(/\/\/(\S*)@/);
+    if (uri != null) {
+        node = node.split(uri[1] + "@").join("");
+        let base = new Base64();
+        uri = "Basic " + base.encode(uri[1]);
+        Store.state.apiSetting = {
+            provider: node,
+            execer: process.env.VUE_APP_DEFAULT_EXECER || DEFAULT_EXECER,
+            Authorization: uri
+        }
+    }
+    return node
+}
+export const defaultNodeAddress = judgeNode(DEFAULT_PROVIDER)
+
+export default Store

@@ -20,7 +20,7 @@ import store, {
 import '@/assets/js/flexible.js'
 import '@/assets/js/flexible_css.js'
 import '@/assets/css/app.scss'
-import Chain33Rpc from 'chain33-rpc-api'
+import Chain33Rpc from '@33cn/chain33-rpc-api'
 
 // Vue.use(VueI18n)
 Vue.use(InfiniteScroll)
@@ -38,6 +38,8 @@ Vue.prototype.$chain33Rpc = new Chain33Rpc(defaultNodeAddress, null, (error) => 
     store.commit('connectStatusOff')
   }
   throw error
+}, [null, 'null'].includes(store.state.apiSetting.Authorization) ? {} : {
+  Authorization: store.state.apiSetting.Authorization
 })
 
 // 处理index含有参数的跳转

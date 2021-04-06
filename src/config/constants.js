@@ -3,7 +3,7 @@
  */
 
 // 默认的浏览节点为当前服务器的 /api
-export const DEFAULT_PROVIDER = process.env.VUE_APP_DEFAULT_PROVIDER === '/api'? `${location.origin}/api`:process.env.VUE_APP_DEFAULT_PROVIDER
+export const DEFAULT_PROVIDER = process.env.VUE_APP_DEFAULT_PROVIDER === '/api' ? `${location.origin}/api` : process.env.VUE_APP_DEFAULT_PROVIDER
 // 执行器，主网是 token 平行链是 user.p.xxx
 export const DEFAULT_EXECER = 'token'
 
@@ -27,3 +27,6 @@ export const SESSION_MAXHASH_KEY = 'maxHash'
 
 // 节点设置列表key
 export const STORAGE_NODES_KEY = 'nodes'
+
+// Basic auth 节点信息
+export const STORAGE_BASIC = 'Auth'
