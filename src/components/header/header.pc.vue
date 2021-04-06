@@ -48,8 +48,10 @@ export default {
     provider() {
       return this.$store.state.apiSetting.provider;
     },
-    logo(){
-      return this.$store.getters.getStyle==='white'? require('../../assets/images/chain33.png'):require('../../assets/images/chain33-b.png')
+    logo() {
+      return this.$store.getters.getStyle === "white"
+        ? require("../../assets/images/logo-white.png")
+        : require("../../assets/images/logo-black.png");
     }
   },
   methods: {

@@ -29,7 +29,6 @@ import pcToken from '@/views/Token/Token.pc.vue'
 import mTokenDetail from '@/views/TokenDetail/TokenDetail.m.vue'
 import pcTokenDetail from '@/views/TokenDetail/TokenDetail.pc.vue'
 
-import Contact from '@/views/Contact.vue'
 
 // 判断是pc还是mobile
 import {
@@ -94,11 +93,6 @@ let router = new Router({
       path: '/tokenDetail',
       name: 'tokenDetail',
       component: checkIsMobile() ? mTokenDetail : pcTokenDetail
-    },
-    {
-      path: '/contant',
-      name: 'contant',
-      component: Contact
     },
     {
       path: '*',

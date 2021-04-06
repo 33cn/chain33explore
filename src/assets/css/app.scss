@@ -2,296 +2,359 @@
 @import './reset-element.css';
 @import './quick-style.scss';
 
-#app{
+#app {
   min-height: 100vh;
-  .content-block{
-    background:$black_bg;
-    transition: background-color .5s;    
+
+  .content-block {
+    background: $black_bg;
+    transition: background-color .5s;
   }
-  &.app-white{
-    .content-block{
-      background:linear-gradient(0deg,#F5F8FD,#F6FAFD);
+
+  &.app-white {
+    .content-block {
+      background: linear-gradient(0deg, #F5F8FD, #F6FAFD);
     }
   }
 }
+
 // 黑色版
 .content-block {
-    .el-pager li{
-      background: #383538!important;
-      color:#DADADA!important;
-    }
-    .el-pager li.active{
-      background:#D9A73A!important;
-      color:#000!important;
-    }
-    .el-pagination button{
-      background: #383538!important;
-      color:#DADADA!important;
-    }
+  .el-pager li {
+    background: #383538 !important;
+    color: #DADADA !important;
+  }
+
+  .el-pager li.active {
+    background: #D9A73A !important;
+    color: #000 !important;
+  }
+
+  .el-pagination button {
+    background: #383538 !important;
+    color: #DADADA !important;
+  }
 }
 
 //白色版
-.app-white .content-block{
-    .el-pager li{
-      background: #fff!important;
-      color:#838B9E!important;
-    }
-    .el-pager li.active{
-      background:#D9A73A!important;
-      color:#fff!important;
-    }
-    .el-pagination button{
-      background: #fff!important;
-      color:#838B9E!important;
-    }
+.app-white .content-block {
+  .el-pager li {
+    background: #fff !important;
+    color: #838B9E !important;
+  }
+
+  .el-pager li.active {
+    background: #D9A73A !important;
+    color: #fff !important;
+  }
+
+  .el-pagination button {
+    background: #fff !important;
+    color: #838B9E !important;
+  }
 }
 
 // header样式
-.app-white .head{
+.app-white .head {
   background: #fff;
-    i.search{
-      color:#838B9E;
+
+  i.search {
+    color: #838B9E;
+  }
+
+  .head-content li {
+    color: #5B5F81;
+
+    &.active {
+      color: #fff;
     }
-    .head-content li{
-      color:#5B5F81;
-      &.active{
-        color:#fff;
-      }
-    }
-    .brand-name {
-      color:#B7B7AD;
-    }
-    input.search{
-      color: #838B9E;
-      border: 1px solid #BBB;
-      background:#fff;
-    }
-    input::-webkit-input-placeholder {
-      color: #838B9E;
-    }
+  }
+
+  .brand-name {
+    color: #B7B7AD;
+  }
+
+  input.search {
+    color: #838B9E;
+    border: 1px solid #BBB;
+    background: #fff;
+  }
+
+  input::-webkit-input-placeholder {
+    color: #838B9E;
+  }
 }
+
 // footer样式
-.app-white .footer{
-  background-color:$day_bg_blue;
-  div.ibox i,p.name{
-    color:#838B9E;
+.app-white .footer {
+  background-color: $day_bg_blue;
+
+  div.ibox i,
+  p.name {
+    color: #838B9E;
   }
 }
 
 // 首页样式
-.app-white .home,.app-white .home-m{
-    background: $day_bg_blue;
-    .banner{
-      background-image: linear-gradient( #F3F7FC 95%, #F8F9FD); 
-      .bg-circle{
-        background-image:radial-gradient(#F3F7FC 95%, #F7FAFD),radial-gradient(#EBECF0 60%,#EBECF0 70%,#EBECF0 72%)!important;
-      }
-      .bg-hide{
-        background:linear-gradient( #F3F7FC 95%, #F7FAFD);
-      }      
-      .circle{
-        background:#f4f5f8;
-      }
-      .totalNum{
-        color:#000;
-      }
+.app-white .home,
+.app-white .home-m {
+  background: $day_bg_blue;
+
+  .banner {
+    background-image: linear-gradient(#F3F7FC 95%, #F8F9FD);
+
+    .bg-circle {
+      background-image: radial-gradient(#F3F7FC 95%, #F7FAFD), radial-gradient(#EBECF0 60%, #EBECF0 70%, #EBECF0 72%) !important;
     }
-    .download{
-      background:#fff;
-      .wallet-title{
-        color:#000;
-      }
-      .inner{
-        color:$day_font_gray;
-      }
+
+    .bg-hide {
+      background: linear-gradient(#F3F7FC 95%, #F7FAFD);
     }
-    .waveMiddle {
-      background-image:url('../../assets/images/img/waved1.png')
+
+    .circle {
+      background: #f4f5f8;
     }
-    .waveBottom {
-      background-image:url('../../assets/images/img/waved2.png')
+
+    .totalNum {
+      color: #000;
     }
+  }
+
+  .download {
+    background: #fff;
+
+    .wallet-title {
+      color: #000;
+    }
+
+    .inner {
+      color: $day_font_gray;
+    }
+  }
 }
 
 // 解析页样式
-.app-white .decode-tx,.app-white .decode-tx-m{
-  .infos{
-    color:#838B9E;
+.app-white .decode-tx,
+.app-white .decode-tx-m {
+  .infos {
+    color: #838B9E;
   }
-  .textvalue,.inputTxt{
-    color:#000;
-    background:#fff;
+
+  .textvalue,
+  .inputTxt {
+    color: #000;
+    background: #fff;
   }
 }
 
 //广播交易页样式
-.app-white .pushtx{
-  .infos{
+.app-white .pushtx {
+  .infos {
     color: #838B9E;
   }
-  .tips{
-    color:#192136;
+
+  .tips {
+    color: #192136;
   }
-  .light{
-    color:#366C96;
+
+  .light {
+    color: #366C96;
   }
-  .textvalue{
-    background:#fff;
-    color:#000;
+
+  .textvalue {
+    background: #fff;
+    color: #000;
     border: 1px solid #E8E9EE;
   }
 }
 
 //节点样式
-.app-white #nodes{
-  .nodes-container{
-    background:#fff;
-    .main-title{
-      color:#000;
+.app-white #nodes {
+  .nodes-container {
+    background: #fff;
+
+    .main-title {
+      color: #000;
     }
-    .info{
-      border-top:1px solid #E2E8EA;
+
+    .info {
+      border-top: 1px solid #E2E8EA;
     }
-    .time-now{
-      border-bottom:1px solid #E2E8EA;
-      color:#83898E;
+
+    .time-now {
+      border-bottom: 1px solid #E2E8EA;
+      color: #83898E;
     }
-    .map{
+
+    .map {
       background: #fff;
       background-image: linear-gradient(transparent 90%, #f6f5ec 90%), linear-gradient(to right, transparent 90%, #f6f5ec 90%);
       background-size: 10px 10px;
     }
   }
-  .map{
-    border-top:1px solid #E2E8EA;
-    border-right:1px solid #F4F1ED;
+
+  .map {
+    border-top: 1px solid #E2E8EA;
+    border-right: 1px solid #F4F1ED;
   }
-  .table-body tr{
-    color:#83898E;
+
+  .table-body tr {
+    color: #83898E;
   }
-  .table-head{
-    color:#000;
+
+  .table-head {
+    color: #000;
   }
 }
 
 //token样式
-.app-white .token{
-  .nodata{
+.app-white .token {
+  .nodata {
     color: #333;
   }
-  .tokenTitle{
-    span{
-      color:#000;
+
+  .tokenTitle {
+    span {
+      color: #000;
     }
   }
-  .table-box{
-    .table1{
-      box-shadow:0px 0px 13px 0px rgba(229,235,243,1);
+
+  .table-box {
+    .table1 {
+      box-shadow: 0px 0px 13px 0px rgba(229, 235, 243, 1);
     }
+
     table tbody tr:hover {
       background: $day_font_graywhite;
-    }    
-    tr:nth-of-type(2n){
+    }
+
+    tr:nth-of-type(2n) {
       background-color: #F9FAFC;
     }
-    tr:nth-of-type(2n+1){
+
+    tr:nth-of-type(2n+1) {
       background-color: #FFF;
     }
-    thead th{
-      background:#fff;
-      color:#000;
+
+    thead th {
+      background: #fff;
+      color: #000;
       border-bottom: 1px solid #F1F2F6;
     }
-    tbody{
-      color:#838B9E;
+
+    tbody {
+      color: #838B9E;
     }
-    .table1 th,.table1 td{
-      border-right:1px solid #F1F2F6;
+
+    .table1 th,
+    .table1 td {
+      border-right: 1px solid #F1F2F6;
     }
   }
-  .searchToken .search{
-    color:$day_font_deepgray;
+
+  .searchToken .search {
+    color: $day_font_deepgray;
   }
-  .el-input__inner{
-    background-color:$day_bg;
-    border:1px solid #bbb;
-    color:$day_font_deepgray;
+
+  .el-input__inner {
+    background-color: $day_bg;
+    border: 1px solid #bbb;
+    color: $day_font_deepgray;
   }
 }
 
 //token详情样式
-.app-white .tokenDetail-box,.app-white .tokenDetail-box-m{
-  .page-btn{
+.app-white .tokenDetail-box,
+.app-white .tokenDetail-box-m {
+  .page-btn {
     background: #fff;
-    color:#838B9E;
+    color: #838B9E;
   }
-  .tokenTitle,.adressInfo{
-    background:#fff;
+
+  .tokenTitle,
+  .adressInfo {
+    background: #fff;
   }
-  .broke a{
+
+  .broke a {
     color: #838B9E;
     cursor: default;
   }
-  .broke .light{
+
+  .broke .light {
     color: #D9A73A;
-    cursor:pointer;
+    cursor: pointer;
   }
-  .theme{
-    color:#192136;
+
+  .theme {
+    color: #192136;
   }
-  .tokenTitle{
-    p{
-      color:#192136;
+
+  .tokenTitle {
+    p {
+      color: #192136;
     }
-    span{
-      color:#8E8E8E;
+
+    span {
+      color: #8E8E8E;
     }
   }
-  .adressInfo{
-    span{
-      color:#192136;
+
+  .adressInfo {
+    span {
+      color: #192136;
     }
-    .light{
-      color:#366C96;
+
+    .light {
+      color: #366C96;
       cursor: pointer;
     }
   }
-  .tradeRecord{
-    background:#fff;
-    color:#192136;
-    .Record-total{
-      color:$day_font_deepgray;
+
+  .tradeRecord {
+    background: #fff;
+    color: #192136;
+
+    .Record-total {
+      color: $day_font_deepgray;
     }
   }
-  .table1{
-    thead th{
-      background-color:#fff;
-      color:#192136;
-      border-bottom:1px solid #E2E8EA;
+
+  .table1 {
+    thead th {
+      background-color: #fff;
+      color: #192136;
+      border-bottom: 1px solid #E2E8EA;
     }
   }
-  table{
-    color:$day_font_deepgray;
+
+  table {
+    color: $day_font_deepgray;
   }
+
   tr:nth-of-type(2n) {
     background-color: $day_bg_blue;
   }
+
   tr:nth-of-type(2n + 1) {
     background-color: #fff;
   }
-  i.search{
-    color:$day_font_deepgray;
+
+  i.search {
+    color: $day_font_deepgray;
   }
-  input.search{
-    background:$day_bg;
-    border:1px solid #E8E9EE;
-    color:$day_font_deepgray;
+
+  input.search {
+    background: $day_bg;
+    border: 1px solid #E8E9EE;
+    color: $day_font_deepgray;
   }
+
   input.search::-webkit-input-placeholder {
-    color:$day_font_deepgray;
+    color: $day_font_deepgray;
   }
 }
-.app-white .tokenDetail-box{
+
+.app-white .tokenDetail-box {
   tbody tr:hover {
     background: $day_bg;
   }
@@ -299,332 +362,413 @@
 
 // 区块页样式
 
-.app-white .blockInfo-pc,.app-white .blockInfo-m{
-  .light{
-    color:#366C96;
+.app-white .blockInfo-pc,
+.app-white .blockInfo-m {
+  .light {
+    color: #366C96;
   }
-  .content{
-    box-shadow:0px 0px 13px 0px rgba(229,235,243,1);
+
+  .content {
+    box-shadow: 0px 0px 13px 0px rgba(229, 235, 243, 1);
   }
-  .table-box{
+
+  .table-box {
     table tbody tr:hover {
       background: $day_font_graywhite;
-    }    
-    tr:nth-of-type(2n){
+    }
+
+    tr:nth-of-type(2n) {
       background-color: #F9FAFC;
     }
-    tr:nth-of-type(2n+1){
+
+    tr:nth-of-type(2n+1) {
       background-color: #FFF;
     }
-    thead th{
-      background:#fff;
-      color:#000;
+
+    thead th {
+      background: #fff;
+      color: #000;
     }
-    tbody{
-      color:#838B9E;
+
+    tbody {
+      color: #838B9E;
     }
   }
 }
 
 // 区块详情样式
-.app-white .block-box{
-  tfoot{
-    color:#333;
+.app-white .block-box {
+  tfoot {
+    color: #333;
   }
-  .trade_hash{
-    background:#fff;
-    > p.txt{
-      color:$day_font_deepgray;
+
+  .trade_hash {
+    background: #fff;
+
+    >p.txt {
+      color: $day_font_deepgray;
     }
   }
-  .theme{
-    color:#000;
-  }  
-  .info{
-    color:#000;
+
+  .theme {
+    color: #000;
   }
-  .adressInfo{
-    background:#fff;
-    .infoBottom{
-      color:#000;
+
+  .info {
+    color: #000;
+  }
+
+  .adressInfo {
+    background: #fff;
+
+    .infoBottom {
+      color: #000;
     }
   }
-  .lightUrl,.light{
-    color:#366C96;
+
+  .lightUrl,
+  .light {
+    color: #366C96;
   }
-  .tradeRecord{
-    background:#fff;
-    color:#000;
+
+  .tradeRecord {
+    background: #fff;
+    color: #000;
   }
-  thead th{
-    background-color:#fff;
-    color:#000;
+
+  thead th {
+    background-color: #fff;
+    color: #000;
   }
+
   tbody tr:hover {
     background: $day_bg;
   }
+
   tr:nth-of-type(2n) {
     background-color: #F9FAFC;
   }
+
   tr:nth-of-type(2n + 1) {
     background-color: #fff;
   }
-  .table1{
-    color:$day_font_deepgray;
-    tr.tradeGroup-one{
-      background-color:#FFFAEE!important;
+
+  .table1 {
+    color: $day_font_deepgray;
+
+    tr.tradeGroup-one {
+      background-color: #FFFAEE !important;
     }
-    .tradeSlot{
+
+    .tradeSlot {
       border-bottom: 1px solid #F6E4B7;
       border-left: 1px solid #F6E4B7;
       border-right: 1px solid #F6E4B7;
     }
-    tr.tradeHead{
-      background-color: #fff!important;
-      .group-box{
+
+    tr.tradeHead {
+      background-color: #fff !important;
+
+      .group-box {
         border-top: 1px solid #F6E4B7;
         background: #FFFAEE;
       }
-      .group-first{
+
+      .group-first {
         border-left: 1px solid #F6E4B7;
-        em{
-          border-color:transparent transparent #F6E4B7 ;
+
+        em {
+          border-color: transparent transparent #F6E4B7;
         }
-        span{
-          border-color:transparent transparent #FFFAEE;
+
+        span {
+          border-color: transparent transparent #FFFAEE;
         }
       }
-      .group-last{
+
+      .group-last {
         border-right: 1px solid #F6E4B7;
       }
     }
-    .trade-line{
+
+    .trade-line {
       background: #F5EEDD;
     }
-    .Head-title{
+
+    .Head-title {
       color: #D7A93A
     }
   }
-  .copy{
-    color:#fff;
+
+  .copy {
+    color: #fff;
   }
-  .copy-left,.copy-right{
-    background:#fff;
-    color:$day_font_deepgray;
-    border:1px solid $day_font_deepgray;
+
+  .copy-left,
+  .copy-right {
+    background: #fff;
+    color: $day_font_deepgray;
+    border: 1px solid $day_font_deepgray;
   }
 }
 
 
 // 交易列表样式
-.app-white .tradeList{
-  .nodata{
+.app-white .tradeList {
+  .nodata {
     background: #fff;
   }
-  .table-box{
-    box-shadow:0px 0px 13px 0px rgba(229,235,243,1); 
-    tr:nth-of-type(2n){
+
+  .table-box {
+    box-shadow: 0px 0px 13px 0px rgba(229, 235, 243, 1);
+
+    tr:nth-of-type(2n) {
       background-color: #F9FAFC;
     }
-    tr:nth-of-type(2n+1){
+
+    tr:nth-of-type(2n+1) {
       background-color: #FFF;
     }
-    tr.tradeGroup-one,tr.tradeSlot{
-      background-color:#FFFAEE!important;
+
+    tr.tradeGroup-one,
+    tr.tradeSlot {
+      background-color: #FFFAEE !important;
       border-left: 1px solid #F6E4B7;
       border-right: 1px solid #F6E4B7;
     }
-    .tradeSlot{
+
+    .tradeSlot {
       border-bottom: 1px solid #F6E4B7;
     }
-    tr.tradeHead{
-      background-color: #fff!important;
-      .group-box{
+
+    tr.tradeHead {
+      background-color: #fff !important;
+
+      .group-box {
         border-top: 1px solid #F6E4B7;
         background: #FFFAEE;
       }
-      .group-first{
+
+      .group-first {
         border-left: 1px solid #F6E4B7;
-        em{
-          border-color:transparent transparent #F6E4B7 ;
+
+        em {
+          border-color: transparent transparent #F6E4B7;
         }
-        span{
-          border-color:transparent transparent #FFFAEE;
+
+        span {
+          border-color: transparent transparent #FFFAEE;
         }
       }
-      .group-last{
+
+      .group-last {
         border-right: 1px solid #F6E4B7;
       }
     }
-    .trade-line{
+
+    .trade-line {
       background: #F5EEDD;
     }
-    .Head-title{
+
+    .Head-title {
       color: #D7A93A
     }
-    thead th{
-      background:#fff;
-      color:#000;
+
+    thead th {
+      background: #fff;
+      color: #000;
     }
-    tbody{
-      color:#838B9E;
+
+    tbody {
+      color: #838B9E;
     }
-    .nodata{
-      color:#838B9E;
+
+    .nodata {
+      color: #838B9E;
     }
-    .light,.h-light{
-      color:#366C96;
+
+    .light,
+    .h-light {
+      color: #366C96;
     }
   }
 }
-.tradeList-pc{
+
+.tradeList-pc {
   table tbody tr:hover {
     background: $day_font_graywhite;
   }
 }
 
 // 交易详情样式
-.app-white #tradehInfo{
-  .trade_hash{
-    background:#fff;
-    >p.txt{
-      color:$day_font_deepgray;
+.app-white #tradehInfo {
+  .trade_hash {
+    background: #fff;
+
+    >p.txt {
+      color: $day_font_deepgray;
     }
   }
-  .trade_hashInfo{
-    background:#fff;
-    .info_box{
-      border-top:1px solid $day_border;
+
+  .trade_hashInfo {
+    background: #fff;
+
+    .info_box {
+      border-top: 1px solid $day_border;
     }
-    >p.theme_info{
-      color:#000;
-    }    
+
+    >p.theme_info {
+      color: #000;
+    }
   }
-  .w810{
-    color:#000;
+
+  .w810 {
+    color: #000;
   }
-  .light{
-    color:$day_font_blue;
+
+  .light {
+    color: $day_font_blue;
   }
-  .inputTxt{
-    background:#fff;
-    border:1px solid #E8E9EE;
+
+  .inputTxt {
+    background: #fff;
+    border: 1px solid #E8E9EE;
   }
+
   .inputTxt::-webkit-scrollbar {
-    background:#E8E9EE;
+    background: #E8E9EE;
   }
 }
 
 // 个人地址样式
-.app-white .address-box{
-  .adressInfo{
-    box-shadow:0px 0px 13px 0px rgba(229,235,243,1);
+.app-white .address-box {
+  .adressInfo {
+    box-shadow: 0px 0px 13px 0px rgba(229, 235, 243, 1);
   }
-  .page-btn{
+
+  .page-btn {
     background: #fff;
-    color:#838B9E;
+    color: #838B9E;
   }
-  a{
-    color:#838B9E;
+
+  a {
+    color: #838B9E;
   }
-  .token-select{
-    input::-webkit-input-placeholder{
-      color:#9194A9;
+
+  .token-select {
+    input::-webkit-input-placeholder {
+      color: #9194A9;
     }
   }
-  .el-input--suffix{
+
+  .el-input--suffix {
+
     // height:42px;
-    input{
-      background:#F7FAFD;
-      color:#000;
-      border:1px solid #E8E9EE;
-      border-radius:21px;
+    input {
+      background: #F7FAFD;
+      color: #000;
+      border: 1px solid #E8E9EE;
+      border-radius: 21px;
     }
   }
+
   .table-box {
-    box-shadow:0px 0px 13px 0px rgba(229,235,243,1);
+    box-shadow: 0px 0px 13px 0px rgba(229, 235, 243, 1);
     background: #fff;
   }
-  button{
+
+  button {
     background: #fff;
-    color:#838B9E;
+    color: #838B9E;
   }
-  .adressInfo{
-    background:#fff;
+
+  .adressInfo {
+    background: #fff;
   }
-  .tradeRecord{
-    background:#fff;
-    color:#000;
+
+  .tradeRecord {
+    background: #fff;
+    color: #000;
   }
-  thead th{
-    background-color:#fff;
-    color:#000;
+
+  thead th {
+    background-color: #fff;
+    color: #000;
   }
+
   tbody tr:hover {
     background: $day_bg;
   }
+
   tr:nth-of-type(2n) {
     background-color: #F9FAFC;
   }
+
   tr:nth-of-type(2n + 1) {
     background-color: #fff;
   }
-  .table1,.table2{
-    color:$day_font_deepgray;
+
+  .table1,
+  .table2 {
+    color: $day_font_deepgray;
   }
-  .theme{
-    color:#000;
+
+  .theme {
+    color: #000;
   }
-  .copy{
-    background:#fff;
-    color:$day_font_deepgray;
-    border:1px solid $day_font_deepgray;
+
+  .copy {
+    background: #fff;
+    color: $day_font_deepgray;
+    border: 1px solid $day_font_deepgray;
   }
-  .info>p:nth-of-type(2),.infoBottom>p:nth-of-type(2){
-    color:#000;
+
+  .info>p:nth-of-type(2),
+  .infoBottom>p:nth-of-type(2) {
+    color: #000;
   }
 }
 
 // block组件样式
 .app-white .main-box {
-  .title>span{
-    color:#000;
+  .title>span {
+    color: #000;
   }
-  .title div:nth-of-type(1){
-    color:$day_font_gray;
+
+  .title div:nth-of-type(1) {
+    color: $day_font_gray;
   }
-  .line-box{
-    .white{
-      color:#000;
+
+  .line-box {
+    .white {
+      color: #000;
     }
-    .blue{
-      color:#366C96;
+
+    .blue {
+      color: #366C96;
     }
-    .line-box{
+
+    .line-box {
       box-shadow: 4px 3px 10px 0px rgba(185, 185, 185, 0.45);
     }
-    .line-title{
-      background:$day_font_graywhite;
+
+    .line-title {
+      background: $day_font_graywhite;
     }
-    .line-body{
-      background:#fff;
-    }
-  }  
-}
-.app-white .home{
-  .wave-content .bg-circle{
-    div:nth-of-type(1){
-      background:url('../../assets/images/img/circleW.png') no-repeat center center;
+
+    .line-body {
+      background: #fff;
     }
   }
 }
 
+
 // 设置provider
-.provider-select{
-  .el-select-dropdown__item{
-      padding-top: 12px;
-      padding-bottom: 12px;
-      height: auto;
+.provider-select {
+  .el-select-dropdown__item {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    height: auto;
   }
 }
 
@@ -634,20 +778,23 @@
 // 通用常见样式
 
 // 链接
-.c-link{
+.c-link {
   cursor: pointer;
   color: $black_font_light;
 }
-.app-white .c-link{
+
+.app-white .c-link {
   cursor: pointer;
   color: $day_font_blue;
 }
-.placeholder-result{
+
+.placeholder-result {
   font-size: 14px;
   line-height: 52px;
   margin: 15px 0;
   color: $black_font_white;
 }
-.app-white .placeholder-result{
+
+.app-white .placeholder-result {
   color: $day_font_dark;
 }

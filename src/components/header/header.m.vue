@@ -1,7 +1,7 @@
 <template>
   <div class="header-m" ref="headerDom">
     <div class="top">
-      <img src="../../assets/images/chain33.png">
+      <img src="../../assets/images/logo-white.png">
       <p v-if="showTip===true" class="tip">当前节点版本过低</p>
       <i @click="show = !show;" class="iconfont icon-caidan"></i>
     </div>
@@ -45,10 +45,6 @@ export default {
         {
           name: "广播交易",
           src: "/pushtx"
-        },
-        {
-          name: "联系我们",
-          src: "/contant"
         }
       ],
       show: false

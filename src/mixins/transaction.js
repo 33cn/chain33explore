@@ -5,7 +5,7 @@ export default {
     return {
       param: "",
       result: "",
-      isMobile:false
+      isMobile: false
     }
   },
   methods: {
@@ -37,7 +37,7 @@ export default {
         })
         return false;
       }
-
+      if (this.param.slice(0, 2) === '0x') this.param = this.param.slice(2, this.param.length)
       if (!/^[0-9a-fA-F]+$/.test(this.param)) {
         this.$notify({
           title: '提示',
@@ -58,7 +58,7 @@ export default {
       }
     }
   },
-  mounted(){
+  mounted() {
     this.isMobile = this.$store.state.isMobile
   }
 }
