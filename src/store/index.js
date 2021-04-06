@@ -131,9 +131,6 @@ var Store = new Vuex.Store({
                 ...state.apiSetting,
                 ...setting
             }
-            localStorage.setItem(STORAGE_PROVIDER_KEY, setting.provider)
-            localStorage.setItem(STORAGE_EXECER_KEY, setting.execer)
-            localStorage.setItem(STORAGE_BASIC, setting.Authorization)
             cleanNodeCache()
         },
         changeStyle(state, style) {
@@ -206,11 +203,11 @@ function judgeNode(node) {
         node = node.split(uri[1] + "@").join("");
         let base = new Base64();
         uri = "Basic " + base.encode(uri[1]);
-        Store.state.apiSetting = {
+        Store.commit('updateApiSetting', {
             provider: node,
             execer: process.env.VUE_APP_DEFAULT_EXECER || DEFAULT_EXECER,
             Authorization: uri
-        }
+        })
     }
     return node
 }
