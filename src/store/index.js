@@ -73,7 +73,7 @@ var Store = new Vuex.Store({
 
         apiSetting: {
             // 节点地址
-            provider: defaultNodeAddress,
+            provider: null,
             // 执行器
             execer: process.env.VUE_APP_DEFAULT_EXECER || DEFAULT_EXECER,
             // Basic auth信息 
