@@ -149,7 +149,7 @@ const txmap = {
         },
         "coinAmount": "reward",
         "coinSymbol": null,
-        "coinStaticSymbol": "BTY",
+        "coinStaticSymbol": process.env.VUE_APP_DEFAULT_COIN,
       },
       "topen": {
         "name": {
@@ -158,7 +158,7 @@ const txmap = {
         },
         "coinAmount": "reward",
         "coinSymbol": null,
-        "coinStaticSymbol": "BTY",
+        "coinStaticSymbol": process.env.VUE_APP_DEFAULT_COIN,
       },
       "tclose": {
         "name": {
@@ -167,7 +167,7 @@ const txmap = {
         },
         "coinAmount": "reward",
         "coinSymbol": null,
-        "coinStaticSymbol": "BTY",
+        "coinStaticSymbol": process.env.VUE_APP_DEFAULT_COIN,
       },
     }
   },
@@ -185,7 +185,7 @@ const txmap = {
         },
         "coinAmount": "amount",
         "coinSymbol": "cointoken",
-        "coinStaticSymbol": "BTY",
+        "coinStaticSymbol": process.env.VUE_APP_DEFAULT_COIN,
       },
       "transfer": {
         "name": {
@@ -194,7 +194,7 @@ const txmap = {
         },
         "coinAmount": "amount",
         "coinSymbol": "cointoken",
-        "coinStaticSymbol": "BTY",
+        "coinStaticSymbol": process.env.VUE_APP_DEFAULT_COIN,
       }
     }
   },
@@ -219,7 +219,7 @@ const txmap = {
         },
         "coinAmount": "amount",
         "coinSymbol": "cointoken",
-        "coinStaticSymbol": "BTY",
+        "coinStaticSymbol": process.env.VUE_APP_DEFAULT_COIN,
       },
       "transfer": {
         "name": {
@@ -228,7 +228,7 @@ const txmap = {
         },
         "coinAmount": "amount",
         "coinSymbol": "cointoken",
-        "coinStaticSymbol": "BTY",
+        "coinStaticSymbol": process.env.VUE_APP_DEFAULT_COIN,
       }
     }
   },

@@ -64,6 +64,7 @@ export default {
                     if (allcached) {
                         const blockList = this.getCachedBlockInfo(startHeight, endHeight)
                         const txList = this.getCachedTxInfo(TX_AMOUNT_IN_FIRST_PAGE)
+                        
                         return {
                             blockList,
                             txList
@@ -76,7 +77,7 @@ export default {
                             .then(({
                                 blockList = [],
                                 txList = []
-                            }) => {
+                            }) => {                                
                                 this.cacheBlockAndTxInfo(blockList, txList)
                                 return {
                                     blockList: this.getCachedBlockInfo(startHeight, endHeight),
@@ -90,6 +91,7 @@ export default {
                     blockList,
                     txList
                 }) => {
+                    
                     this.blockList = blockList
                     this.txList = txList
                 })

@@ -285,6 +285,7 @@ export default {
                             txs.map((tx, i) => {
                                 tx.tyName = recipts[i].tyName
                                 tx.blockTime = block.blockTime
+                                
                                 tx = new TxInfo(tx)
                                 // id 是为了 等待请求期间 补充 hash 时使用
                                 tx.id = createId()
@@ -379,7 +380,7 @@ export default {
         },
 
         // 从缓存中取交易信息
-        getCachedTxInfo(amount = 0) {
+        getCachedTxInfo(amount = 0) {            
             amount >= cachedTxList.length ? (amount = cachedTxList.length) : null
             return cachedTxList.slice(0, amount)
         },
